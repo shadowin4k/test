@@ -115,8 +115,10 @@ if __name__ == '__main__':
         else:
             webhook_url = None
 
-        while True:
-            request()
+        request()  # Run once instead of infinite loop
+
+        # After scanning ends
+        input("\nPress Enter to return to menu...")
 
     except Exception as e:
         ErrorModule(e)
